@@ -2,35 +2,36 @@
 // parameters: price and discount (with a default value of 10). The function should
 // return the final price after applying the discount
 
-// function calculateDiscount(price , discount = 10){
-//     let real_price = price - (price * (discount/100));
-//     return real_price;
-// }
-// console.log(calculateDiscount(1000)); //Output : 900
+function calculateDiscount(price , discount = 10){
+    let real_price = price - (price * (discount/100));
+    return real_price;
+}
+console.log(calculateDiscount(1000) +"\n"); //Output : 900
 
 //....................................................Q2 Starting.....................................................................
 
 // Q2)Create a function mergeArrays that takes two arrays as parameters and returns a new
 // array that combines both arrays using the spread operator.
 
-// function mergeArrays(...a){
-//     return a;
-// }
-// let x1 = [1,2,3];
-// let x2 = [4,5,6];
-// console.log(mergeArrays(...x1,...x2)); // Output : [1,2,3,4,5,6]
+function mergeArrays(...a){
+    return a;
+}
+let x1 = [1,2,3];
+let x2 = [4,5,6];
+console.log(mergeArrays(...x1,...x2)+"\n"); // Output : [1,2,3,4,5,6]
 
 //......................................................Q3 Starting.......................................................................
 
 // Q3)Write a function logArguments that takes any number of arguments and logs them to
 // the console. Use rest parameters to collect the arguments
 
-// function logArguments(...a){
-//     for(let i = 0 ; i < a.length ; i++){
-//         console.log(a[i]);
-//     }
-// }
-// logArguments(1,2,3,4,5,"Hola");
+function logArguments(...a){
+    for(let i = 0 ; i < a.length ; i++){
+        console.log(a[i]);
+    }
+    console.log("\n");
+}
+logArguments(1,2,3,4,5,"Hola");
 
 //......................................................Q4 Starting.........................................................................
 
@@ -38,23 +39,24 @@
 // number of names. The function should return an array of personalized messages for
 // each name
 
-// function createMessage(message="Hello " , ...names){
-//     for(let i = 0 ; i < names.length ; i++){
-//         console.log(message + " " + names[i]);
-//     }
-// }
-// createMessage("Welcome" , "Sashank" , "Lpu" , "Hola" , "Winter Pep");
+function createMessage(message="Hello " , ...names){
+    for(let i = 0 ; i < names.length ; i++){
+        console.log(message + " " + names[i]);
+    }
+    console.log("\n");
+}
+createMessage("Welcome" , "Sashank" , "Lpu" , "Hola" , "Winter Pep");
 
 //......................................................Q5 Starting............................................................................
 
 // Q5)Define a function sum that takes three numbers as parameters and returns their sum. Use
 // the spread operator to call this function with an array of numbers.
 
-// function sum(num1 , num2 , num3){
-//     return num1 + num2 + num3;
-// }
-// let numbers_array = [1,2,3];
-// console.log( sum(...numbers_array) ); 
+function sum(num1 , num2 , num3){
+    return num1 + num2 + num3;
+}
+let numbers_array = [1,2,3];
+console.log( sum(...numbers_array) +"\n" ); 
 // Output :6
 
 //.................................................Q6 Starting.............................................................................
